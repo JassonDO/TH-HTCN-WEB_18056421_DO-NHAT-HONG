@@ -1,0 +1,79 @@
+/*----------------------BÀI 9--------------*/
+
+.bai-9{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.table-1{
+    background-color: rgb(243, 179, 100);
+    border-collapse: collapse;
+    border: 2px solid red;
+    text-align: center;
+}
+
+.table-2{
+    background-color: rgb(243, 179, 100);
+    border-collapse: collapse;
+    border: 2px solid red;
+    text-align: center;
+}
+#tr9{
+    border-collapse: collapse;
+    border: 2px solid red;
+    text-align: center;
+}
+#td9{
+    border-collapse: collapse;
+    border: 2px solid red;
+    text-align: center;
+}
+#th9{
+    background-color: aqua;
+    border-collapse: collapse;
+    border: 2px solid red;
+    text-align: center;
+}
+#HTML-code{
+    background-color: aqua;
+    border-collapse: collapse;
+    border: 2px solid red;
+    text-align: center;
+}
+#Description-of-Character{
+    background-color: aqua;
+    border-collapse: collapse;
+    border: 2px solid red;
+    text-align: center;
+}
+
+
+/*----------------------BÀI 14--------------*/
+.table-bai14{
+    text-align: left;
+    background-color: white;
+    font-size: 20px;
+    text-align: left;
+}
+
+/*----------------------BÀI 15--------------*/
+.bai15a{
+    width: 300px;
+}
+fieldset{
+    width: 300px;
+}
+
+/*----------------------BÀI 16--------------*/
+.bai16{
+    line-height: 5px;
+}
+
+/*----------------------BÀI 17--------------*/
+#survey-form{
+    text-align: center;
+    font-weight: bold;
+    font-size: 60px;
+}
+.bai-17a{
+    background-color: orange;
+}

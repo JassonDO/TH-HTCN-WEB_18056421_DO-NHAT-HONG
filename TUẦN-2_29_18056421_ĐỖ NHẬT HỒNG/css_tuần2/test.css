@@ -1,0 +1,80 @@
+.bai-9{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.tb1,.tb2, tr, td{
+    background-color: rgb(243, 179, 100);
+    border-collapse: collapse;
+    border: 2px solid red;
+    text-align: center;
+}
+th{
+    background-color: rgb(119, 100, 243);
+    border-collapse: collapse;
+    border: 2px solid red;
+    text-align: center;
+}
+
+
+
+
+/* main css week2 */
+
+/* ----------------- tag--------------- */
+
+
+.nhap-ten-ho{
+    text-align: left;
+}
+
+/* ------------ bai 9
+ --------*/
+
+.bai-9{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.table-1,.table-2, tr, td{
+    background-color: rgb(243, 179, 100);
+    border-collapse: collapse;
+    border: 2px solid red;
+    text-align: center;
+}
+th{
+    background-color: aqua;
+    border-collapse: collapse;
+    border: 2px solid red;
+    text-align: center;
+}
+
+.project-list-hong{
+    list-style-type: inherit;
+}
+.tech-project,.restaurant{
+    list-style-type: circle;
+}
+.table-bai14{
+    text-align: left;
+    background-color: white;
+    font-size: 20px;
+    text-align: left;
+}
+.bai15a{
+    width: 300px;
+}
+fieldset{
+    width: 300px;
+}
+.bai16{
+    line-height: 5px;
+}
+/*----------- id ------------------*/
+
+#HTML-code{
+    width: 80px;
+}
+#HTML-code{
+    width: 40px;
+}
