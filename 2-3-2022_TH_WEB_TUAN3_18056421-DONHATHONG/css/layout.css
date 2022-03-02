@@ -1,0 +1,69 @@
+
+
+.wrapper{
+    height: 700px;
+    width: 1089;
+}
+header{
+    height: 150px;
+    width: 1089;
+    background-color: rgb(161, 144, 121);
+}
+nav{
+    height: 50px;
+    width: 1089;
+    background-color: rgb(236, 235, 232);
+}
+.content{
+    height: 300px;
+    width: 1089;
+    background-color: rgb(211, 195, 174);
+}
+footer{
+    height: 200px;
+    width: 1089;
+    background-color: black;
+}
+aside{
+    height: 100%;
+    width: 40%;
+    background-color: rgb(221, 215, 250);
+    float: left;
+}
+section{
+    height: 300px;
+    width: 40%;
+    background-color: red;
+    float: left;
+}
+.menu li{
+    height: 100%;
+    width: 200px;
+    float: left;
+    list-style-type: none;
+    line-height: 50px;
+    text-indent: 15px;
+    position: relative;
+
+}
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(16, 16, 17);
+}
+
+.menu li:hover{
+    background-color: rgb(183, 135, 222);
+}
+li:hover>a{
+    font-style: italic;
+    font-weight: bold;
+    color: yellow;
+}
+.menu li, .submenu{
+    display: none;
+    position: absolute;
+}
+.menu li:hover, .submenu{
+    display: block;
+}
