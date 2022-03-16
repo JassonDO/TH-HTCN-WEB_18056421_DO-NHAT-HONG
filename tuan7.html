@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function KiemTraTenDN(){
+            var re = /^[a-z]\*w/;
+            if (re.test(document.getElementById('txtDN').value.trim()) == false){
+                tendn.innerText = "* bat buoc, bat dau bang ki tu";
+                return false;
+            }
+            else{
+                tendn.innerText = "*";
+                return true;
+            }
+        }
+        function KiemTraPassWord(){
+            var re = /(?=.*\d).{6,}/;
+            if (re.test(document.getElementById('txtMK').value.trim()) == false){
+                mk.innerText = " * phai co  chu, so, it nhat 6 ki tu";
+                return false;
+            }
+            else{
+                mk.innerText = "*";
+                return true;
+            }
+        }
+        function KiemTraXacNhanPassWord(){
+            if (document.getElementById('txtXNMK').value != document.getElementById('txtMK').value){
+                xnmk.innerText = "* phai giong mat khau";
+                return false;
+            }
+            else{
+                xnmk.innerText = "*";
+                return true;
+            }
+        }
+        function KiemTraNgaySinh(){
+            var ns  = new Date(document.getElementById('txtNS').value);
+            var today = new Date();
+            if(eval(today.getFullYear()-ns.getFullYear()) <= 10){
+                ngaysinh.innerText = "* tuoi phai lon hon 10";
+                return false;
+            }
+            else{
+                ngaysinh.innerText = "*";
+                return true;
+
+            }
+        }
+        function Submitform(){
+            if (KiemTraTenDN() = false || KiemTraPassword() == false || KiemTraXacNhanPassword() == false) 
+            {
+                alert("Bạn chưa nhập đầy đủ và đúng thông tin!");
+                } else {
+                    var tt1= document.getElementById("txtName").value;
+                    var tt2 = document.getElementById("txtNS").value;
+                    var w= open("FormValidation_info.html","Ketqua");
+                     w.document.write("<B>THONG TIN CA-NHAN</b>");
+                    w.document.write("Ho ten: " + tt1 + "<br>");
+                    w.document.write("Nam sinh: + tt2 + "<br>");
+
+                }
+        }
+    </script>
+
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+        div{
+            border-bottom: 1px solid wheat;
+            margin: auto;
+            padding-bottom: 10px;
+            padding-top: 5px;
+            width: 720px;
+
+        }
+        .title{
+            float: left;
+            width: 200px;
+            text-align: right;
+            color: black;
+            font-size: 18px;
+
+        }
+        .radio-buttons label{
+            float: none;
+        }
+        .submit{
+            text-align: center;
+        }
+        input[type=submit], input[type = reset]{
+            padding: .1em .2em;
+            border: 1px solid hsla(0%, 0%, 0%, .3);
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+            text-shadow: 0px -1px 0px hsla(0%, 0%, 0%, .8);
+            font-size: 18px;
+        }
+        span{
+            color: red;
+            font-size: 14px;
+        }
+        </style>
+</head>
+<body>
+    <h2 align = "center"> dang ki tai khoan</h2>
+    <form action="#" name="form1" onsubmit="Submitform();" method="post">
+        <div>
+
+            <label for="txtDN" class="title">Tên dang nhap:</label>            
+            <input id="txtDN" onBlur-"return KiesTraTenDN();" type="text" name="txtdn" size="30" placeholder-"txtDN" /> <span id="tendn">*</span> 
+        </div> 
+        <div>
+            <label for="txtMk" class="title"> mat khau:</label>
+            <input type="text" id="txtMK", onblur="return KiemTraPassWord();" type="password" name="txtMK" size="30" placeholder="txtMK"/> <span id="mk">*</span>
+        </div>
+        <h5 align = "center">thong tin ca nhan</h5>
+        <div>
+            <label for="txtName" class="title"> ho va ten:</label>  
+            <input type="text" id="txtName" size="30" placeholder="txtName"/> <span id="hoten">*bat buoc</span>
+        </div> 
+        <div>
+            <label for="txtNS" class="title"> ngay sinh:</label>
+            <input type="date" id="txtNS" size="30" placeholder="txtNS" onblur="return KiemTraNgaySinh();"/> <span id="ngaysinh">  </span>
+        </div>
+        <div class="radio-buttons">
+            <span class="title"> gioi dinh</span>
+            <input type="radio" name="gender" id="male" value="M" checked>
+            <label for="male">Nam</label>
+            <input type="radio" name="gender" id="female" value="F" checked>
+            <label for="male">Nu</label> <br>
+        </div>
+        <div>
+            <label for="txtDC" class="title"> dia chi </label>
+            <input type="text" id="txtDC" size="30" placeholder="txtDC"/> <span id="diachi">  </span>
+        </div>
+        <div>
+            <label for="txtDT" class="title"> dien thoai </label>
+            <input type="text" id="txtDT" size="30" placeholder="txtDT"/> <span id="dienthoai"> phai la so </span>
+        </div>
+        <div>
+            <label for="txtEmail" class="title"> Email </label>
+            <input type="text" id="txtEmail" size="30" placeholder="txtEmail"/> <span id="email"> nhap dugn dia chi email </span>
+        </div>
+        <div class="submit">
+            <input type="submit" value="dang ky" id="submit">
+            <input type="reset" value="huy" id="submit">
+        </div>
+    </form>
+</body>
+</html>
